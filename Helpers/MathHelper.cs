@@ -1,19 +1,34 @@
 ﻿using System;
 
-namespace ProjectEulerSolution.Helpers
+namespace ProjectEuler.Helpers
 {
     public class MathHelper
     {
-        public static int Multiples(int limitNumber, int multiple)
+        public static List<int> Multiples(int limitNumber, List<int> multiples)
         {
-            List<int> multiplesThree = new List<int>();
+            List<int> result = [];
 
             for (int i = 1; i < limitNumber; i++)
             {
-                if (i % multiple == 0) multiplesThree.Add(i);
+                bool isMultiple = IsMultiple(multiples, i);
+
+                if (isMultiple) result.Add(i);
             }
 
-            return multiplesThree.Count;
+            return result;
+        }
+
+
+        public static bool IsMultiple(List<int> multiples, int number)
+        {
+            var result = false;
+
+            foreach (int multiple in multiples)
+            {
+                if (number % multiple == 0) result = true;
+            }
+            
+            return result;
         }
 
 

@@ -1,16 +1,16 @@
 ﻿using System;
+using ProjectEuler.Problems;
 
-namespace ProjectEulerSolutions
+namespace ProjectEuler
 {
-    public class Menu
+    public class Program
     {
         static void Main(string[] args)
         {
             Console.WriteLine("Project Euler Solutions");
 
             // Ejecutar soluciones a problemas
-            Console.WriteLine("Multiples of 3 or 5: " + Problem1.Solve());
-            Console.WriteLine("Problema 2: " + Problem2.Solve());
+            Console.WriteLine("Multiples of 3 or 5: " + MultiplesThreeFive.Solve(1000, [3, 5]));
         }
     }
 }
