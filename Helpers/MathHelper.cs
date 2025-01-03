@@ -43,6 +43,15 @@ namespace ProjectEuler.Helpers
 
             return sumNumbers;
         }
+
+
+        public static bool Model(int number, int model)
+        {
+            int preResult = number % model;
+            bool result = preResult == 0;
+
+            return result;
+        }
     }
 }
 

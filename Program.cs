@@ -10,7 +10,8 @@ namespace ProjectEuler
             Console.WriteLine("Project Euler Solutions");
 
             // Ejecutar soluciones a problemas
-            Console.WriteLine("Multiples of 3 or 5: " + MultiplesThreeFive.Solve(1000, [3, 5]));
+            //Console.WriteLine("Multiples of 3 or 5: " + MultiplesThreeFive.Solve(1000, [3, 5]));
+            Console.WriteLine("Even Fibonacci Numbers: " + EvenFibonacciNumbers.Solve(4000000));
         }
     }
 }
