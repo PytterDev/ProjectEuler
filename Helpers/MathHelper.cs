@@ -45,9 +45,9 @@ namespace ProjectEuler.Helpers
         }
 
 
-        public static bool Model(int number, int model)
+        public static bool Model(long number, long model)
         {
-            int preResult = number % model;
+            long preResult = number % model;
             bool result = preResult == 0;
 
             return result;
