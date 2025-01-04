@@ -52,6 +52,39 @@ namespace ProjectEuler.Helpers
 
             return result;
         }
+
+
+        public static List<long> PrimeNumbers(long limitNumber)
+        {
+            List<long> result = [];
+            long upNumber;
+            int count;
+            bool isPrime;
+
+            for (long number = 2; number <= limitNumber; number++)
+            {
+                upNumber = 2;
+                count = 0;
+                isPrime = true;
+
+                while (upNumber <= number)
+                {
+                    if (Model(number, upNumber)) count++;
+
+                    if (count > 1)
+                    {
+                        isPrime = false;
+                        break;
+                    }
+
+                    upNumber++;
+                }
+
+                if (isPrime) result.Add(number);
+            }
+
+            return result;
+        }
     }
 }
 
