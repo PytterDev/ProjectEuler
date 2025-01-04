@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Numerics;
 using ProjectEuler.Problems;
 
 namespace ProjectEuler
@@ -11,7 +12,8 @@ namespace ProjectEuler
 
             // Ejecutar soluciones a problemas
             //Console.WriteLine("Multiples of 3 or 5: " + MultiplesThreeFive.Solve(1000, [3, 5]));
-            Console.WriteLine("Even Fibonacci Numbers: " + EvenFibonacciNumbers.Solve(4000000));
+            //Console.WriteLine("Even Fibonacci Numbers: " + EvenFibonacciNumbers.Solve(4000000));
+            Console.WriteLine("Largest Prime Factor: " + LargestPrimeFactor.Solve(600851475143));
         }
     }
 }

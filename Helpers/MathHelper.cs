@@ -18,7 +18,6 @@ namespace ProjectEuler.Helpers
             return result;
         }
 
-
         public static bool IsMultiple(List<int> multiples, int number)
         {
             var result = false;
@@ -30,7 +29,6 @@ namespace ProjectEuler.Helpers
             
             return result;
         }
-
 
         public static int SumList(List<int> listNumbers)
         {
@@ -44,7 +42,6 @@ namespace ProjectEuler.Helpers
             return sumNumbers;
         }
 
-
         public static bool Model(long number, long model)
         {
             long preResult = number % model;
@@ -53,8 +50,7 @@ namespace ProjectEuler.Helpers
             return result;
         }
 
-
-        public static List<long> PrimeNumbers(long limitNumber)
+        public static List<long> Primes(long limitNumber)
         {
             List<long> result = [];
             long upNumber;
@@ -63,27 +59,34 @@ namespace ProjectEuler.Helpers
 
             for (long number = 2; number <= limitNumber; number++)
             {
-                upNumber = 2;
-                count = 0;
-                isPrime = true;
-
-                while (upNumber <= number)
-                {
-                    if (Model(number, upNumber)) count++;
-
-                    if (count > 1)
-                    {
-                        isPrime = false;
-                        break;
-                    }
-
-                    upNumber++;
-                }
+                isPrime = Prime(number);
 
                 if (isPrime) result.Add(number);
             }
 
             return result;
+        }
+
+        public static bool Prime(long number)
+        {
+            long upNumber = 2;
+            int count = 0;
+            bool isPrime = true;
+
+            while (upNumber < number)
+            {
+                if (Model(number, upNumber)) count++;
+
+                if (count > 1)
+                {
+                    isPrime = false;
+                    break;
+                }
+
+                upNumber++;
+            }
+
+            return isPrime;
         }
     }
 }
