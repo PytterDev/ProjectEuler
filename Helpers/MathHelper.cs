@@ -42,7 +42,7 @@ namespace ProjectEuler.Helpers
             return sumNumbers;
         }
 
-        public static bool Model(long number, long model)
+        public static bool IsModel(long number, long model)
         {
             long preResult = number % model;
             bool result = preResult == 0;
@@ -59,7 +59,7 @@ namespace ProjectEuler.Helpers
 
             for (long number = 2; number <= limitNumber; number++)
             {
-                isPrime = Prime(number);
+                isPrime = IsPrime(number);
 
                 if (isPrime) result.Add(number);
             }
@@ -67,7 +67,7 @@ namespace ProjectEuler.Helpers
             return result;
         }
 
-        public static bool Prime(long number)
+        public static bool IsPrime(long number)
         {
             long upNumber = 2;
             int count = 0;
@@ -75,7 +75,7 @@ namespace ProjectEuler.Helpers
 
             while (upNumber < number)
             {
-                if (Model(number, upNumber)) count++;
+                if (IsModel(number, upNumber)) count++;
 
                 if (count > 1)
                 {
@@ -87,6 +87,32 @@ namespace ProjectEuler.Helpers
             }
 
             return isPrime;
+        }
+
+        public static bool IsPalindrome(int number)
+        {
+            string sNumber = number.ToString();
+            int lenNumber = sNumber.Length;
+            int halfLenNumber = lenNumber / 2;
+            int startNumber = 0;
+            int endNumber = lenNumber - 1;
+            char firstCharacter;
+            char lastCharacter;
+            bool isPalindrome = true;
+
+            while (halfLenNumber > 0)
+            {
+                firstCharacter = sNumber[startNumber];
+                lastCharacter = sNumber[endNumber];
+
+                if (firstCharacter != lastCharacter) isPalindrome = false;
+
+                startNumber++;
+                endNumber--;
+                halfLenNumber--;
+            }
+
+            return isPalindrome;
         }
     }
 }

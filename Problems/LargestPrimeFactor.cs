@@ -11,7 +11,7 @@ namespace ProjectEuler.Problems
 
             for (long number = maxNumber; number >= 2; number--)
             {
-                if (MathHelper.Model(limitNumber, number) && MathHelper.Prime(number)) return number;
+                if (MathHelper.IsModel(limitNumber, number) && MathHelper.IsPrime(number)) return number;
             }
 
             return 0;

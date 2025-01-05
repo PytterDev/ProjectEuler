@@ -16,7 +16,7 @@ namespace ProjectEuler.Problems
 
             while (addingNumber < limitNumber)
             {
-                model = MathHelper.Model(addingNumber, 2);
+                model = MathHelper.IsModel(addingNumber, 2);
 
                 if (model)
                 {

@@ -3,7 +3,7 @@ using ProjectEuler.Helpers;
 
 namespace ProjectEuler.Problems
 {
-    public class MultiplesThreeFive
+    internal class MultiplesThreeFive
     {
         public static int Solve(int limitNumber, List<int> factors)
         {
