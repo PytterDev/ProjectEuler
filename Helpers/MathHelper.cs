@@ -73,7 +73,7 @@ namespace ProjectEuler.Helpers
             int count = 0;
             bool isPrime = true;
 
-            while (upNumber < number)
+            while (upNumber <= number)
             {
                 if (IsModel(number, upNumber)) count++;
 
