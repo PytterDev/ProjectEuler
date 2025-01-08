@@ -45,9 +45,7 @@ namespace ProjectEuler.Problems
                     number++;
                     count++;
                 }
-                Console.WriteLine(preResult.ToString());
                 if (result <  preResult) result = preResult;
-                Console.WriteLine(result.ToString());
             }
 
             return result;
