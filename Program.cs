@@ -15,7 +15,8 @@ namespace ProjectEuler
             //Console.WriteLine("Even Fibonacci Numbers: " + EvenFibonacciNumbers.Solve(4000000));
             //Console.WriteLine("Largest Prime Factor: " + LargestPrimeFactor.Solve(600851475143));
             //Console.WriteLine("Largest Palindrome Product: " + LargestPalindromeProduct.Solve());
-            Console.WriteLine("Largest Palindrome Product: " + SmallestMultiple.Solve());
+            //Console.WriteLine("Largest Palindrome Product: " + SmallestMultiple.Solve());
+            Console.WriteLine("Sum Square Difference: " + SumSquareDifference.Solve(100));
         }
     }
 }
