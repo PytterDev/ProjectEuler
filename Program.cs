@@ -19,7 +19,8 @@ namespace ProjectEuler
             //Console.WriteLine("Largest Palindrome Product: " + LargestPalindromeProduct.Solve());
             //Console.WriteLine("Smallest Multiple: " + SmallestMultiple.Solve());
             //Console.WriteLine("Sum Square Difference: " + SumSquareDifference.Solve(100));
-            Console.WriteLine("First Prime Number: " + FirstPrimeNumber.Solve(10001));
+            //Console.WriteLine("First Prime Number: " + FirstPrimeNumber.Solve(10001));
+            Console.WriteLine("Largest Product in a Series: " + LargestProductSeries.Solve(13));
         }
     }
 }
