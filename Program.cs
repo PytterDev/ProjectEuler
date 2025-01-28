@@ -24,7 +24,8 @@ namespace ProjectEuler
             //Console.WriteLine("Special Pythagorean Triplet: " + SpecialPythagoreanTriplet.Solve(1000));
             //Console.WriteLine("Summation of Primes: " + SummationPrimes.Solve(10));
             //Console.WriteLine("Largest Product in a Grid: " + LargestProductGrid.Solve());
-            Console.WriteLine("Highly Divisible Triangular Number: " + HighlyDivisibleTriangularNumber.Solve());
+            //Console.WriteLine("Highly Divisible Triangular Number: " + HighlyDivisibleTriangularNumber.Solve());
+            Console.WriteLine("Large Sum: " + LargeSum.Solve());
         }
     }
 }
