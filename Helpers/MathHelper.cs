@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjectEuler.Problems;
+using System;
 
 namespace ProjectEuler.Helpers
 {
@@ -53,8 +54,6 @@ namespace ProjectEuler.Helpers
         public static List<long> Primes(long limitNumber)
         {
             List<long> result = [];
-            long upNumber;
-            int count;
             bool isPrime;
 
             for (long number = 2; number <= limitNumber; number++)
@@ -113,6 +112,26 @@ namespace ProjectEuler.Helpers
             }
 
             return isPalindrome;
+        }
+
+        public static int biggestNumber(int firstNumber, int secondNumber)
+        {
+            int biggest = 0;
+
+            if (firstNumber == secondNumber)
+            {
+                biggest = firstNumber;
+            }
+            else if (secondNumber > firstNumber)
+            {
+                biggest = secondNumber;
+            }
+            else if (secondNumber < firstNumber)
+            {
+                biggest = firstNumber;
+            }
+
+            return biggest;
         }
     }
 }
